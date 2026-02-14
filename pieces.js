@@ -3,7 +3,7 @@
 const reponse = await fetch("pieces-autos.json");
 const pieces = await reponse.json();
 
-console.log(pieces);
+// console.log(pieces);
 for (let index = 0; index < pieces.length; index++) {
      const article = pieces[index];
 
@@ -37,6 +37,22 @@ for (let index = 0; index < pieces.length; index++) {
     sectionFiches.appendChild(ArticleBalise);
 
 }
+const boutonTrier = document.querySelector(".btn-trier");
+boutonTrier.addEventListener("click", function () {
+    const ArrayCoppy =Array.from(pieces);
+    pieces.sort(function(a,b)
+    {
+        return a.prix -b.prix;
+    });
+      
+    console.log(ArrayCoppy);
+});
 
+const boutonFiltrer = document.querySelector(".btn-filtrer");
+boutonFiltrer.addEventListener("click", function () {
+    const piecesFiltrees = pieces.filter(function (piece) {
+       return piece.prix <= 35;
+    });
 
-
+    console.log(piecesFiltrees);
+});
