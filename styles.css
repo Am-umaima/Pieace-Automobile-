@@ -43,8 +43,17 @@ main {
 }
 
 .fiches {
-	flex: 1;
+	Margin: 8px;
+	display: grid;
 	margin: 8px;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+}
+article
+{
+	border: 1px solid black;
+	padding: 20px;
+	background-color: rgb(247, 245, 243);
 }
 .fiches img {
 	max-width: 200px;
@@ -52,4 +61,5 @@ main {
 .fiches p {
 	margin-top: 4px;
 	margin-bottom: 4px;
+	font-weight: 400;
 }
