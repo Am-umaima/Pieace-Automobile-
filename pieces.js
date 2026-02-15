@@ -3,6 +3,8 @@
 const reponse = await fetch("pieces-autos.json");
 const pieces = await reponse.json();
 
+
+
 // console.log(pieces);
 for (let index = 0; index < pieces.length; index++) {
      const article = pieces[index];
@@ -40,7 +42,7 @@ for (let index = 0; index < pieces.length; index++) {
 const boutonTrier = document.querySelector(".btn-trier");
 boutonTrier.addEventListener("click", function () {
     const ArrayCoppy =Array.from(pieces);
-    pieces.sort(function(a,b)
+    ArrayCoppy.sort(function(a,b)
     {
         return a.prix -b.prix;
     });
@@ -56,3 +58,42 @@ boutonFiltrer.addEventListener("click", function () {
 
     console.log(piecesFiltrees);
 });
+
+const btncroissant =document.querySelector(".btn-detrier");
+btncroissant.addEventListener("click",function () {
+    const copyArray = Array.from(pieces);
+    copyArray.sort(function(a,b){
+        return b.prix- a.prix;
+    });
+    console.log(copyArray)
+});
+
+const buttondescription = document.querySelector(".btn-descrop");
+buttondescription.addEventListener("click", function(){
+    const filteresitems =pieces.filter(function (pieces) {
+        return !pieces.categorie;
+    });
+     console.log(filteresitems)
+})
+
+// const show = document.querySelector(".HellaGood");
+// show.addEventListener("click",function () {
+    
+    const newPart = document.createElement("article");
+    
+    const newTxt =document.createElement("ul");
+    for (let index = 0; index < pieces.length; index++) {
+        const list = document.createElement("li");
+        list.innerText=pieces[index].nom;
+        // list.innerText=pieces.map(function (pieces) {
+        //     console.log("adikher  "+pieces[index])
+        // return pieces.nom;
+    // });
+    newTxt.appendChild(list);
+    }
+   
+    newPart.appendChild(newTxt);
+    document.querySelector(".fiches").appendChild(newPart)
+// })
+
+
