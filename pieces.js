@@ -75,25 +75,20 @@ buttondescription.addEventListener("click", function(){
     });
      console.log(filteresitems)
 })
-
-// const show = document.querySelector(".HellaGood");
-// show.addEventListener("click",function () {
-    
-    const newPart = document.createElement("article");
-    
-    const newTxt =document.createElement("ul");
-    for (let index = 0; index < pieces.length; index++) {
-        const list = document.createElement("li");
-        list.innerText=pieces[index].nom;
-        // list.innerText=pieces.map(function (pieces) {
-        //     console.log("adikher  "+pieces[index])
-        // return pieces.nom;
-    // });
-    newTxt.appendChild(list);
+const noms = pieces.map(piece => piece.nom);
+for(let i = pieces.length -1 ; i >= 0; i--){
+    console.log("\n" + noms)
+    if(pieces[i].prix > 35){
+        noms.splice(i,1);
     }
-   
-    newPart.appendChild(newTxt);
-    document.querySelector(".fiches").appendChild(newPart)
-// })
-
+}
+const abordablesElements = document.createElement('ul');
+//Ajout de chaque nom à la liste
+for(let i=0; i < noms.length ; i++){
+    const nomElement = document.createElement('li');
+    nomElement.innerText = noms[i];
+    abordablesElements.appendChild(nomElement)
+}
+// Ajout de l'en-tête puis de la liste au bloc résultats filtres
+document.querySelector('.abordables').appendChild(abordablesElements)
 
