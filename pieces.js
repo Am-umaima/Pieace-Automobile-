@@ -29,6 +29,11 @@ function AfficerPices(pieces) {
         const descriptionElement =document.createElement("p")
         descriptionElement.innerText=article.description ?? "Pas de description pour le moment.";
 
+        const avisBouton = document.createElement("button");
+        avisBouton.dataset.id = article.id;
+        avisBouton.textContent = "Afficher les avis";
+
+
         const disponElement =document.createElement("p")
         disponElement.innerText=article.disponibilite ? "En stock" : "Rupture de stock";
         ArticleBalise.appendChild(imageElement);
@@ -37,6 +42,7 @@ function AfficerPices(pieces) {
         ArticleBalise.appendChild(categorieElement);
         ArticleBalise.appendChild(descriptionElement);
         ArticleBalise.appendChild(disponElement);
+         ArticleBalise.appendChild(avisBouton);
 
         sectionFiches.appendChild(ArticleBalise);
 
