@@ -32,7 +32,7 @@
         "prix": 9.60,
         "categorie": "Freinage",
         "image" : "images/liquide-frein.png",
-        "disponibilite" : true 
+        "disponibilite" : false 
     },
     {
         "id": 5,
@@ -42,6 +42,44 @@
         "description" : "Performances d’essuyage au top ! Longueur : 550 mm.",
         "disponibilite" : true 
     }
+,
+    {
+        "id": 6,
+        "image": "images/boite-vitesses.png",
+        "nom": "Boîte de Vitesses",
+        "prix": 151.00,
+        "description": "Boîte de vitesses manuelle, 6 rapports. Idéale pour une conduite fluide et performante.",
+        "disponibilite": true,
+        "categorie": "Transmission"
+    },
+    {
+        "id": 7,
+        "image": "images/filtre-a-air.png",
+        "nom": "Filtre à air",
+        "prix": 25.10,
+        "categorie": "Moteur",
+        "description": "Filtration optimale pour un moteur performant.",
+        "disponibilite": true
+    },
+    {
+        "id": 8,
+        "image": "images/radiateur.png",
+        "nom": "Radiateur",
+        "prix": 120.50,
+        "categorie": "Refroidissement",
+        "description": "Radiateur haute performance pour un moteur bien refroidi.",
+        "disponibilite": false
+    },
+    {
+    "id": 9,
+    "nom": "Batterie de voiture",
+    "prix": 110.00,
+    "categorie": "Électricité",
+    "image": "images/batterie-voiture.png",
+    "description": "Batterie 12V haute performance assurant un démarrage fiable et une alimentation stable des équipements électriques.",
+    "disponibilite": true
+    }       
+   
 ]
 
 

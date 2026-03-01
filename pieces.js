@@ -74,21 +74,4 @@ buttondescription.addEventListener("click", function(){
         return !pieces.categorie;
     });
      console.log(filteresitems)
-})
-const noms = pieces.map(piece => piece.nom);
-for(let i = pieces.length -1 ; i >= 0; i--){
-    console.log("\n" + noms)
-    if(pieces[i].prix > 35){
-        noms.splice(i,1);
-    }
-}
-const abordablesElements = document.createElement('ul');
-//Ajout de chaque nom à la liste
-for(let i=0; i < noms.length ; i++){
-    const nomElement = document.createElement('li');
-    nomElement.innerText = noms[i];
-    abordablesElements.appendChild(nomElement)
-}
-// Ajout de l'en-tête puis de la liste au bloc résultats filtres
-document.querySelector('.abordables').appendChild(abordablesElements)
-
+});
