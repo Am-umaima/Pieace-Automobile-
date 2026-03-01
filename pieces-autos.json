@@ -4,7 +4,7 @@
         "nom": "Ampoule LED",
         "prix": 60,
         "categorie": "O,    ptiques",
-        "image" : "images/ampoule-boite-a-gants.png",
+        "image" : "images/ampoule-led.png",
         "description" : "Distance d’éclairage : 100 mètres !",
         "disponibilite" : true 
     },

@@ -15,6 +15,7 @@
 				<!-- Menu de recherche -->
 				<section class="filtres">
 					<h3>Filtres</h3>
+					
 					<button class="btn-trier">Trier par prix croissant</button>
 					<br>
 					<button class="btn-filtrer">Filtrer les pièces non abordables</button>
@@ -23,8 +24,13 @@
 					<br>
 					<button class="btn-descrop">Filtrer les pièces sans descriptions </button>
 					<br><br>
-					<button class="HellaGood">Show somthing new </button>
+					
 					<br>
+					<form>
+						<label>Tries par prix :</label><br><br>
+						<input type="range" id="Rangeprices" min="0" max="200" step="5" value="0"/>
+						<label class="valuety">0€</label>
+					</form>
 				</section>
 
 				<!-- Fiches produits -->
