@@ -1,4 +1,4 @@
- console.log("hey beauty  ");
+import { ajoutListenersAvis } from "./avis.js";
 // Récupération des pièces depuis le fichier JSON
 const reponse = await fetch("pieces-autos.json");
 const pieces = await reponse.json();
@@ -41,6 +41,7 @@ function AfficerPices(pieces) {
         sectionFiches.appendChild(ArticleBalise);
 
     }   
+    ajoutListenersAvis();
 }
 AfficerPices(pieces);
 
