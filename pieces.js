@@ -3,8 +3,6 @@ import { ajoutListenersAvis } from "./avis.js";
 const reponse = await fetch("pieces-autos.json");
 const pieces = await reponse.json();
 
-fetch("http://monsite.fr/ma-ressource");
-console.log("Le script continue sans attendre la réponse");
 
 // console.log(pieces);
 function AfficerPices(pieces) {
