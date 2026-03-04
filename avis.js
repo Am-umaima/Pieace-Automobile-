@@ -1,8 +1,10 @@
 export function ajoutListenersAvis() {
+
   const boutons = document.querySelectorAll(".fiches article button");
 
   for (let i = 0; i < boutons.length; i++) {
     boutons[i].addEventListener("click", async function (event) {
+      
       const id = event.target.dataset.id;
 
       const reponse = await fetch(`http://localhost:8081/pieces/${id}/avis`);
@@ -12,10 +14,17 @@ export function ajoutListenersAvis() {
       const avisElement = document.createElement("p");
 
       for (let i = 0; i < avis.length; i++) {
-        avisElement.innerHTML += `${avis[i].utilisateur} : ${avis[i].commentaire}<br>`;
+        avisElement.innerHTML += `<strong>${avis[i].utilisateur} </strong>: ${avis[i].commentaire}<br><br>`;
       }
 
       pieceElement.appendChild(avisElement);
     });
   }
+}
+
+export function ajoutListenerEnvoyerAvis() {
+   const formulaireAvis = document.querySelector(".formulaire-avis");
+   formulaireAvis.addEventListener("submit", function (event) {
+   /* ... */
+   });
 }
