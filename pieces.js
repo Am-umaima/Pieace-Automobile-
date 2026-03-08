@@ -4,6 +4,8 @@ const reponse = await fetch("http://localhost:8081/pieces");
 const pieces = await reponse.json();
 
 
+ajoutListenerEnvoyerAvis();
+
 // console.log(pieces);
 function AfficerPices(pieces) {
 
