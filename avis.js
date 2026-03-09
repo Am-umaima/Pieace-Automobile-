@@ -45,5 +45,10 @@ export function ajoutListenerEnvoyerAvis() {
             headers: { "Content-Type": "application/json" },
             body: chargeUtile
         });
-  });
+        alert("avis bien ajouter"); 
+        document.querySelector("[name=piece-id]").value="";
+        document.querySelector("[name=utilisateur").value="";
+        document.querySelector("[name=commentaire").value="";
+        document.querySelector("[name=nbretolile").value=1;
+  }); 
 }
